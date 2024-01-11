@@ -1,7 +1,7 @@
 const cat = document.getElementById("cat");
 const score = document.getElementById("score");
 
-let sc = localStorage.getItem("c");
+let sc = Number(localStorage.getItem("c") || 0);
 score.innerText = sc;
 
 function onCatMouseUp() {
