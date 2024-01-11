@@ -1,7 +1,8 @@
 const cat = document.getElementById("cat");
 const score = document.getElementById("score");
 
-let sc = 0;
+let sc = localStorage.getItem("c");
+score.innerText = sc;
 
 function onCatMouseUp() {
     cat.src = "./assets/img/normal.png";
@@ -26,6 +27,7 @@ function onCatMouseDown() {
     audio.play();
 
     sc += 1;
+    localStorage.setItem("c", sc);
     score.innerText = sc;
 }
 
